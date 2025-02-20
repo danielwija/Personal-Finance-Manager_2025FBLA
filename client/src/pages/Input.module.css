@@ -1,0 +1,121 @@
+/* === AI-ASSISTED STYLES START === */
+/* These styles were optimized using ChatGPT to improve alignment and UI clarity */
+
+.mainContainer {
+  flex-grow: 1;
+  position: relative;
+}
+
+.cardContainer {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formLabel {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #6c757d;
+}
+
+.formInput,
+.formSelect {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #f7f7f7;
+  padding: 0.75rem;
+  font-size: 16px;
+}
+
+.formTextarea {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #f7f7f7;
+  padding: 0.75rem;
+  font-size: 16px;
+  height: 120px;
+}
+
+.txnTypeContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 1.5rem;
+}
+
+.txnButton {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #6c757d;
+  transition: all 0.3s;
+}
+
+.txnButton:hover,
+.txnButton:focus {
+  color: #000;
+}
+
+.txnButton.active {
+  border-bottom: 2px solid #000;
+  color: #000;
+}
+
+.inlineGroup {
+  display: flex;
+  gap: 1rem;
+}
+
+.inlineGroup > .formGroup {
+  flex: 1;
+}
+/* === AI-ASSISTED STYLES START === */
+/* These styles were optimized using ChatGPT to improve alignment and UI clarity */
+
+.addButton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #007bff; /* Blue color */
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.addButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.updateButton {
+  background-color: #ff9800; /* Orange for updating a record */
+  color: white;
+}
+
+.updateButton:hover {
+  background-color: #e68900; /* Darker orange on hover */
+  transform: scale(1.05);
+}
+
+/* === AI-ASSISTED STYLES END === */

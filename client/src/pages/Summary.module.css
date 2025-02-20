@@ -1,0 +1,29 @@
+.summaryPage {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  text-align: center;
+  color: #333;
+}
+
+.summary {
+  margin-bottom: 20px;
+}
+
+.chart {
+  margin-top: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.categoryList ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.categoryList li {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,260 @@
+{
+  "incomeCat": [
+    {
+      "id": 1,
+      "catName": "Salary"
+    },
+    {
+      "id": 2,
+      "catName": "Freelance"
+    },
+    {
+      "id": 3,
+      "catName": "Investments"
+    },
+    {
+      "id": 4,
+      "catName": "Gifts"
+    },
+    {
+      "id": 5,
+      "catName": "Other"
+    }
+  ],
+  "expenseCat": [
+    {
+      "id": 1,
+      "catName": "Food"
+    },
+    {
+      "id": 2,
+      "catName": "Rent"
+    },
+    {
+      "id": 3,
+      "catName": "Transportation"
+    },
+    {
+      "id": 4,
+      "catName": "Entertainment"
+    },
+    {
+      "id": 5,
+      "catName": "Utilities"
+    },
+    {
+      "id": 6,
+      "catName": "Shopping"
+    },
+    {
+      "id": 7,
+      "catName": "Healthcare"
+    },
+    {
+      "id": 8,
+      "catName": "Other"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1676594657821,
+      "type": "expense",
+      "categoryId": 4,
+      "amount": 120,
+      "date": "2025-02-20",
+      "description": "Movie night"
+    },
+    {
+      "id": 1740010443867,
+      "type": "income",
+      "categoryId": 2,
+      "amount": 50,
+      "date": "2025-02-19",
+      "description": "Freelance work"
+    },
+    {
+      "id": 1740006303315,
+      "type": "expense",
+      "categoryId": 1,
+      "amount": 20,
+      "date": "2025-02-21",
+      "description": "Groceries"
+    },
+    {
+      "id": 1740006503315,
+      "type": "income",
+      "categoryId": 1,
+      "amount": 2000,
+      "date": "2025-02-18",
+      "description": "Monthly salary"
+    },
+    {
+      "id": 1740006703315,
+      "type": "expense",
+      "categoryId": 2,
+      "amount": 800,
+      "date": "2025-02-15",
+      "description": "Rent payment"
+    },
+    {
+      "id": 1740006903315,
+      "type": "expense",
+      "categoryId": 3,
+      "amount": 150,
+      "date": "2025-02-10",
+      "description": "Car repair"
+    },
+    {
+      "id": 1740007103315,
+      "type": "income",
+      "categoryId": 3,
+      "amount": 500,
+      "date": "2025-02-12",
+      "description": "Investment returns"
+    },
+    {
+      "id": 1740007303315,
+      "type": "expense",
+      "categoryId": 5,
+      "amount": 120,
+      "date": "2025-02-14",
+      "description": "Electricity bill"
+    },
+    {
+      "id": 1740007503315,
+      "type": "income",
+      "categoryId": 4,
+      "amount": 100,
+      "date": "2025-02-16",
+      "description": "Gift received"
+    },
+    {
+      "id": 1740007703315,
+      "type": "expense",
+      "categoryId": 7,
+      "amount": 250,
+      "date": "2025-02-13",
+      "description": "Healthcare expenses"
+    },
+    {
+      "id": 1740007903315,
+      "type": "expense",
+      "categoryId": 6,
+      "amount": 75,
+      "date": "2025-02-17",
+      "description": "Clothing purchase"
+    },
+    {
+      "id": 1740010000001,
+      "type": "income",
+      "categoryId": 1,
+      "amount": 2100,
+      "date": "2025-01-30",
+      "description": "Salary"
+    },
+    {
+      "id": 1740010000002,
+      "type": "expense",
+      "categoryId": 3,
+      "amount": 30,
+      "date": "2025-01-28",
+      "description": "Transportation (Bus)"
+    },
+    {
+      "id": 1740010000003,
+      "type": "income",
+      "categoryId": 2,
+      "amount": 75,
+      "date": "2025-01-25",
+      "description": "Freelance work"
+    },
+    {
+      "id": 1740010000004,
+      "type": "expense",
+      "categoryId": 4,
+      "amount": 200,
+      "date": "2025-01-24",
+      "description": "Concert ticket"
+    },
+    {
+      "id": 1740010000005,
+      "type": "expense",
+      "categoryId": 7,
+      "amount": 100,
+      "date": "2025-01-22",
+      "description": "Doctor's appointment"
+    },
+    {
+      "id": 1740010000006,
+      "type": "expense",
+      "categoryId": 6,
+      "amount": 180,
+      "date": "2025-01-20",
+      "description": "Shopping spree"
+    },
+    {
+      "id": 1740010000007,
+      "type": "income",
+      "categoryId": 5,
+      "amount": 150,
+      "date": "2025-01-18",
+      "description": "Gift received"
+    },
+    {
+      "id": 1740010000008,
+      "type": "expense",
+      "categoryId": 5,
+      "amount": 90,
+      "date": "2025-01-17",
+      "description": "Electricity bill"
+    },
+    {
+      "id": 1740010000009,
+      "type": "income",
+      "categoryId": 3,
+      "amount": 450,
+      "date": "2025-01-12",
+      "description": "Investment returns"
+    },
+    {
+      "id": 1740010000010,
+      "type": "expense",
+      "categoryId": 2,
+      "amount": 820,
+      "date": "2025-01-10",
+      "description": "Rent payment"
+    },
+    {
+      "id": 1740010000011,
+      "type": "income",
+      "categoryId": 2,
+      "amount": 60,
+      "date": "2025-02-11",
+      "description": "Freelance work"
+    },
+    {
+      "id": 1740010000012,
+      "type": "expense",
+      "categoryId": 8,
+      "amount": 15,
+      "date": "2025-02-09",
+      "description": "Miscellaneous"
+    },
+    {
+      "id": 1740010000013,
+      "type": "income",
+      "categoryId": 4,
+      "amount": 50,
+      "date": "2025-02-07",
+      "description": "Gift received"
+    },
+    {
+      "id": 1740010000014,
+      "type": "expense",
+      "categoryId": 6,
+      "amount": 55,
+      "date": "2025-02-08",
+      "description": "Clothing purchase"
+    }
+  ]
+}

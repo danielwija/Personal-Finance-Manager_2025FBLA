@@ -1,0 +1,85 @@
+/* General Layout */
+.container {
+  margin-top: 1rem;
+}
+
+.card {
+  margin-bottom: 1rem;
+  box-shadow: none; /* Remove shadow */
+  border-radius: 8px; /* Slightly rounded corners for a softer feel */
+  background-color: #f8f9fa; /* Light gray background for subtle contrast */
+  border: none; /* Ensure no border */
+}
+
+.card-body {
+  padding: 1rem; /* Increase padding for a cleaner look */
+  background-color: #f8f9fa; /* Light background for card body */
+  box-shadow: none; /* Remove shadow */
+}
+
+.transactionDate,
+.transactionCategory {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6c757d; /* Lighter gray for less emphasis */
+}
+
+.transactionAmount {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333; /* Dark gray for readability */
+}
+
+.transactionAmount.text-success {
+  color: #28a745; /* Green for positive transactions */
+}
+
+.transactionAmount.text-danger {
+  color: #dc3545; /* Red for negative transactions */
+}
+
+.transactionNotes {
+  font-size: 0.95rem;
+  color: #495057; /* Slightly darker gray for less contrast */
+}
+
+.card-body .btn {
+  min-width: 80px;
+  font-size: 0.9rem;
+  color: #007bff; /* Maintain link color */
+  background-color: transparent; /* Transparent button background */
+  border: none;
+  padding: 0; /* Remove extra padding */
+}
+
+.card-body .btn-link {
+  padding-left: 0;
+  font-size: 0.9rem;
+  color: #007bff;
+}
+
+.card-body .btn-link:hover {
+  text-decoration: none; /* Remove underline on hover */
+}
+
+/* Styling for search input and filter */
+.form-control {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  border-radius: 4px; /* Subtle rounded corners */
+  padding: 0.5rem; /* Padding for a cleaner input */
+  border: 1px solid #ced4da; /* Light border for input */
+}
+
+.btn-link {
+  color: #007bff;
+}
+
+.btn-link:hover {
+  text-decoration: none; /* No underline effect */
+}
+
+/* Remove hover effect on card-body */
+.card-body:hover {
+  background-color: #f8f9fa !important;
+}

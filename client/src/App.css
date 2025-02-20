@@ -1,0 +1,29 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* from AI */
+#header {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url('/images/header_image.jpg');
+}
+
+#header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#header h1, #header p {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+/* End of AI */
