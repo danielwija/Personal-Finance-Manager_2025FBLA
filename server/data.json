@@ -255,6 +255,30 @@
       "amount": 55,
       "date": "2025-02-08",
       "description": "Clothing purchase"
+    },
+    {
+      "id": 1740140891196,
+      "type": "income",
+      "categoryId": 4,
+      "amount": 158,
+      "date": "2025-02-19",
+      "description": "From Amy"
+    },
+    {
+      "id": 1740141081891,
+      "type": "expense",
+      "categoryId": 1,
+      "amount": 13,
+      "date": "2025-02-19",
+      "description": "In-n-out"
+    },
+    {
+      "id": 1740141180053,
+      "type": "income",
+      "categoryId": 4,
+      "amount": 185,
+      "date": "2025-02-19",
+      "description": "From Bob"
     }
   ]
 }

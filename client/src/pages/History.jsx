@@ -1,78 +1,4 @@
-// import * as Icon from "react-bootstrap-icons";
-// import HistoryCSS from "./History.module.css";
-
-// function History() {
-//   return (
-//     <main className={`${HistoryCSS.historyMain} flex-grow-1`}>
-//       <div className="container py-5">
-//         {/* Header */}
-//         <div className="d-flex justify-content-center my-4">
-//           <h1 id="balance" className={HistoryCSS.balanceHeader}>
-//             Current Balance:{" "}
-//             <span className={HistoryCSS.balanceAmount}>$1,234.56</span>
-//           </h1>
-//         </div>
-
-//         {/* Search Section */}
-//         <div className="form-group m-3">
-//           <label htmlFor="search" className={HistoryCSS.searchLabel}>
-//             Search and Filter:
-//           </label>
-//           <input
-//             type="text"
-//             id="search"
-//             name="search"
-//             className={`form-control ${HistoryCSS.searchInput}`}
-//             placeholder="Search transactions"
-//           />
-//         </div>
-
-//         {/* Transaction List */}
-//         <ul className={`list-group mx-3 mt-3 ${HistoryCSS.transactionList}`}>
-//           <li className={`list-group-item ${HistoryCSS.transactionItem}`}>
-//             <div className="d-flex align-items-center w-100">
-//               {/* Left: Date and Type */}
-//               <div className={HistoryCSS.transactionDetails}>
-//                 <Icon.PlusCircle className={HistoryCSS.transactionIcon} />
-//                 <div>
-//                   <p className={HistoryCSS.transactionDate}>2014-02-02</p>
-//                   <span className={HistoryCSS.transactionType}>Investment</span>
-//                 </div>
-//               </div>
-
-//               {/* Right: Amount */}
-//               <div className={HistoryCSS.transactionAmount}>$1324</div>
-
-//               {/* Separator */}
-//               <div className={HistoryCSS.verticalSeparator}></div>
-
-//               {/* Action Buttons */}
-//               <div className={HistoryCSS.transactionActions}>
-//                 <button
-//                   type="button"
-//                   className={`btn btn-link ${HistoryCSS.updateBtn}`}
-//                   aria-label="Update transaction"
-//                   onClick={() => console.log("Update clicked")}
-//                 >
-//                   Update
-//                 </button>
-//                 <button
-//                   type="button"
-//                   className={`btn btn-link ${HistoryCSS.deleteBtn}`}
-//                   aria-label="Delete transaction"
-//                   onClick={() => console.log("Delete clicked")}
-//                 >
-//                   Delete
-//                 </button>
-//               </div>
-//             </div>
-//           </li>
-//           {/* Add more transaction items here */}
-//         </ul>
-//       </div>
-//     </main>
-//   );
-// }
+/* ====== AI Generated Code ====== */
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import * as Icon from "react-bootstrap-icons";
@@ -92,14 +18,15 @@ function History() {
   const [showFilters, setShowFilters] = useState(false);
   const navigate = useNavigate();
 
+  // Fetch transactions on component mount
   useEffect(() => {
-    // Fetch transactions
     fetch(`${API_URL}/transactions`)
       .then((response) => response.json())
-      .then((data) => setTransactions(data.filter((txn) => txn.amount > 0)))
+      .then((data) => setTransactions(data.filter((txn) => txn.amount > 0))) // Ensure only valid transactions
       .catch((error) => console.error("Error loading transactions:", error));
   }, []);
 
+  // Delete a transaction after confirmation
   const deleteTransaction = (id) => {
     if (!window.confirm("Are you sure you want to delete this transaction?"))
       return;
@@ -112,30 +39,24 @@ function History() {
       .catch((error) => console.error("Error deleting transaction:", error));
   };
 
+  // Navigate to the update transaction page
   const updateTransaction = (transaction) => {
     navigate(`/input/update/${transaction.id}`, {
-      state: {
-        transactionData: {
-          id: transaction.id,
-          category: transaction.category,
-          amount: transaction.amount,
-          date: transaction.date,
-          description: transaction.description,
-          type: transaction.type,
-        },
-      },
+      state: { transactionData: transaction },
     });
   };
 
+  // Toggle expanded state for transaction details
   const toggleExpand = (id) => {
     setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
+  // Handle filter input changes
   const handleFilterChange = (e) => {
-    const { name, value } = e.target;
-    setFilters((prev) => ({ ...prev, [name]: value }));
+    setFilters((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  // Filter transactions based on search and filter criteria
   const filteredTransactions = transactions.filter((txn) => {
     const matchesSearch =
       txn.category.toLowerCase().includes(searchText.toLowerCase()) ||
@@ -158,7 +79,7 @@ function History() {
     <main className="container py-4">
       <h1 className="mb-4 text-center">Transaction History</h1>
 
-      {/* Search */}
+      {/* Search Bar */}
       <div className="mb-3">
         <input
           type="text"
@@ -169,7 +90,7 @@ function History() {
         />
       </div>
 
-      {/* More Filters Button */}
+      {/* Toggle Advanced Filters */}
       <button
         className="btn btn-link mb-3"
         onClick={() => setShowFilters(!showFilters)}
@@ -177,7 +98,7 @@ function History() {
         {showFilters ? "Hide Filters" : "More Filters"}
       </button>
 
-      {/* Advanced Filters */}
+      {/* Filters Section */}
       {showFilters && (
         <div className="mb-3">
           <div className="row">
@@ -235,76 +156,49 @@ function History() {
               key={txn.id}
               className="card mb-2 shadow-lg rounded-3 border-light"
             >
-              <div className="card-body p-3">
-                {/* Flexbox container for all items */}
-                <div className="d-flex justify-content-between align-items-center">
-                  {/* Transaction Date and Category - Left aligned */}
-                  <div className="d-flex w-75">
-                    <div className="transactionDate me-3">
-                      <p className="m-0">{txn.date}</p>
-                    </div>
-                    <div className="transactionCategory">
-                      <p className="m-0">{txn.category}</p>{" "}
-                      {/* Use category directly */}
-                    </div>
-                  </div>
-
-                  {/* Amount - Right aligned */}
-                  <div className="transactionAmount ms-auto">
-                    <span
-                      className={
-                        txn.type === "income" ? "text-success" : "text-danger"
-                      }
-                    >
-                      {txn.type === "income"
-                        ? `+${txn.amount}`
-                        : `-${txn.amount}`}
-                    </span>
-                  </div>
-
-                  {/* Expand Button - Aligned on the far right */}
-                  <button
-                    className="btn btn-link text-muted ms-3"
-                    onClick={() => toggleExpand(txn.id)}
-                  >
-                    {expanded[txn.id] ? (
-                      <Icon.ChevronUp />
-                    ) : (
-                      <Icon.ChevronDown />
-                    )}
-                  </button>
+              <div className="card-body p-3 d-flex justify-content-between align-items-center">
+                {/* Transaction Date & Category */}
+                <div className="d-flex w-75">
+                  <p className="m-0 me-3">{txn.date}</p>
+                  <p className="m-0">{txn.category}</p>
                 </div>
-
-                {/* Expanded details (hidden until clicked) */}
-                {expanded[txn.id] && (
-                  <div className="card-body">
-                    <p className="transactionNotes">
-                      {txn.description
-                        ? txn.description.split("\n").map((line, index) => (
-                            <span key={index}>
-                              {line}
-                              <br />
-                            </span>
-                          ))
-                        : "No notes."}
-                    </p>
-                    <div className="d-flex justify-content-between">
-                      <button
-                        className="btn btn-outline-primary"
-                        onClick={() => updateTransaction(txn)}
-                      >
-                        <Icon.Pencil /> Edit
-                      </button>
-                      <button
-                        className="btn btn-outline-danger"
-                        onClick={() => deleteTransaction(txn.id)}
-                      >
-                        <Icon.Trash /> Delete
-                      </button>
-                    </div>
-                  </div>
-                )}
+                {/* Amount */}
+                <span
+                  className={
+                    txn.type === "income" ? "text-success" : "text-danger"
+                  }
+                >
+                  {txn.type === "income" ? `+${txn.amount}` : `-${txn.amount}`}
+                </span>
+                {/* Expand Button */}
+                <button
+                  className="btn btn-link text-muted ms-3"
+                  onClick={() => toggleExpand(txn.id)}
+                >
+                  {expanded[txn.id] ? <Icon.ChevronUp /> : <Icon.ChevronDown />}
+                </button>
               </div>
+
+              {/* Expanded Details */}
+              {expanded[txn.id] && (
+                <div className="card-body">
+                  <p>{txn.description || "No notes."}</p>
+                  <div className="d-flex justify-content-between">
+                    <button
+                      className="btn btn-outline-primary"
+                      onClick={() => updateTransaction(txn)}
+                    >
+                      <Icon.Pencil /> Edit
+                    </button>
+                    <button
+                      className="btn btn-outline-danger"
+                      onClick={() => deleteTransaction(txn.id)}
+                    >
+                      <Icon.Trash /> Delete
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           ))
         ) : (

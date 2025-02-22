@@ -1,9 +1,13 @@
+/* ====== AI Assisting Code ====== */
+/* I write most of the code and logic, but still use AI to do minor improvements. */
+
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import InputCSS from "./Input.module.css";
 import moment from "moment";
 
-const URL = "http://localhost:5000/";
+const PORT = 5000;
+const URL = `http://localhost:${PORT}/`;
 
 const Input = ({ incomeCat = [], expenseCat = [] }) => {
   const { mode, id } = useParams();
@@ -16,7 +20,7 @@ const Input = ({ incomeCat = [], expenseCat = [] }) => {
 
   useEffect(() => {
     if (mode === "update" && id) {
-      const fetchUrl = `${URL}api/transactions/${id}`;
+      const fetchUrl = `${API_URL}api/transactions/${id}`;
       fetch(fetchUrl)
         .then((response) => {
           if (!response.ok) {
@@ -29,7 +33,7 @@ const Input = ({ incomeCat = [], expenseCat = [] }) => {
             setTransactionData(data);
             setTxnDate(data.date);
             setTxnType(data.type.toUpperCase());
-            setTxnAmt(data.amount.toString()); // Keep it as a string
+            setTxnAmt(data.amount.toString());
             setTxnNote(data.description);
 
             if (data.type === "income") {
@@ -77,7 +81,7 @@ const Input = ({ incomeCat = [], expenseCat = [] }) => {
     const endpoint =
       mode === "update" ? `api/transactions/${id}` : "api/transactions/add";
 
-    fetch(URL + endpoint, {
+    fetch(API_URL + endpoint, {
       method: method,
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(transactionData),
