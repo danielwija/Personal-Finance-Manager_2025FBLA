@@ -1,4 +1,4 @@
-/* ====== AI Assisting Code ====== */
+/* ====== AI Generated Code ====== */
 
 import express from "express";
 import cors from "cors";
