@@ -7,7 +7,7 @@ import InputCSS from "./Input.module.css";
 import moment from "moment";
 
 const PORT = 5000;
-const URL = `http://localhost:${PORT}/`;
+const API_URL = `http://localhost:${PORT}/`;
 
 const Input = ({ incomeCat = [], expenseCat = [] }) => {
   const { mode, id } = useParams();
